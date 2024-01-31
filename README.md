@@ -1,4 +1,4 @@
-## Python codes for the Semantic Web Technologies and Knowledge Graphs module (2022/2023)
+## Python codes for the Semantic Web Technologies and Knowledge Graphs module (2023/2024)
 
 - **Laboratory 1**: Set up.
 - **Laboratory 2**: Creating (small) RDF-based Knowledge Graphs
