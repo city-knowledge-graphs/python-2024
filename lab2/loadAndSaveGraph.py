@@ -42,6 +42,7 @@ def loadTriplesAndSaveToTargetFormat(file, source_format, target_format):
         print((s.n3(), p.n3(), o.n3()))
     
     print("Saving graph from " + source_format + " to " + target_format)
+    #print(g.serialize(format="turtle").decode("utf-8"))
     g.serialize(destination=file + "."+target_format, format=target_format)
 
 
