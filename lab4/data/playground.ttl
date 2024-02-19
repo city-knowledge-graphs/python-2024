@@ -6,6 +6,7 @@
 @prefix tto: <http://example.org/tuto/ontology#> .
 @prefix ttr: <http://example.org/tuto/resource#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 ttr:Eve dbo:parent ttr:William ;
 	dbp:birthDate "2006-11-03"^^xsd:date ;
@@ -52,43 +53,43 @@ ttr:William dbo:parent ttr:John ;
 
 dbo:Person rdfs:subClassOf tto:Creature .
 
-tto:Animal a rdfs:Class ;
+tto:Animal a owl:Class ;
 	rdfs:isDefinedBy <http://example.org/tuto/ontology#> ;
 	rdfs:label "animal" ;
 	rdfs:subClassOf tto:Creature .
 
-tto:Cat a rdfs:Class ;
+tto:Cat a owl:Class ;
 	rdfs:isDefinedBy <http://example.org/tuto/ontology#> ;
 	rdfs:label "cat" ;
 	rdfs:subClassOf tto:Animal .
 
-tto:Creature a rdfs:Class ;
+tto:Creature a owl:Class ;
 	rdfs:isDefinedBy <http://example.org/tuto/ontology#> ;
 	rdfs:label "creature" .
 
-tto:Dog a rdfs:Class ;
+tto:Dog a owl:Class ;
 	rdfs:isDefinedBy <http://example.org/tuto/ontology#> ;
 	rdfs:label "dog" ;
 	rdfs:subClassOf tto:Animal .
 
-tto:Monkey a rdfs:Class ;
+tto:Monkey a owl:Class ;
 	rdfs:isDefinedBy <http://example.org/tuto/ontology#> ;
 	rdfs:label "monkey" ;
 	rdfs:subClassOf tto:Animal .
 
-tto:pet a rdf:Property ;
+tto:pet a owl:ObjectProperty ;
 	rdfs:domain dbo:Person ;
 	rdfs:isDefinedBy <http://example.org/tuto/ontology#> ;
 	rdfs:label "domestic animal" ;
 	rdfs:range tto:Animal .
 
-tto:sex a rdf:Property ;
+tto:sex a owl:DatatypeProperty ;
 	rdfs:domain tto:Creature ;
 	rdfs:isDefinedBy <http://example.org/tuto/ontology#> ;
 	rdfs:label "sex" ;
 	rdfs:range xsd:string .
 
-tto:weight a rdf:Property ;
+tto:weight a owl:DatatypeProperty ;
 	rdfs:comment "weight in kilograms" ;
 	rdfs:domain tto:Creature ;
 	rdfs:isDefinedBy <http://example.org/tuto/ontology#> ;
