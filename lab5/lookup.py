@@ -330,10 +330,11 @@ class GoogleKGLookup(Lookup):
         for element in json['itemListElement']:
             
             types = set()
-            
-            for t in element['result']['@type']:
-                if t != 'Thing':
-                    types.add("http://schema.org/"+t)
+
+            if '@type' in element['result']:
+                for t in element['result']['@type']:
+                    if t != 'Thing':
+                        types.add("http://schema.org/"+t)
             
             
             description=''
